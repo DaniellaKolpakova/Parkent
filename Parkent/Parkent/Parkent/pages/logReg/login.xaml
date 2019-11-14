@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.logReg.login">
+    <ContentPage.Resources>
+        <Style x:Key="Label" TargetType="Label">
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+        </Style>
+        <Style x:Key="Entry" TargetType="Entry">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#Comfortaa"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#0e88db">
+            <StackLayout Margin="30">
+                <StackLayout>
+                    <Label Text="Логин" Style="{StaticResource Label}"/>
+                    <Entry x:Name="loginVal" TextChanged="update" Placeholder="Введите логин" MaxLength="12" Style="{StaticResource Entry}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Пароль" Style="{StaticResource Label}"/>
+                    <Entry x:Name="passVal" TextChanged="update" Placeholder="Введите пароль" MaxLength="18" IsPassword="True" Style="{StaticResource Entry}"/>
+                </StackLayout>
+                <StackLayout Margin="60" VerticalOptions="EndAndExpand">
+                    <Button x:Name="goButton" Clicked="logIn" Text="Войти" IsEnabled="False" BackgroundColor="White" FontSize="32" TextColor="#0e88db" CornerRadius="100" FontFamily="{StaticResource Light}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.menu.addBalace">
+    <ContentPage.Resources>
+        <Style x:Key="Label" TargetType="Label">
+            <Setter Property="FontSize" Value="36"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+        </Style>
+        <Style x:Key="Entry" TargetType="Entry">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Light.ttf#Comfortaa"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#0e88db">
+            <StackLayout Margin="30">
+                <Frame CornerRadius="15" Padding="0" Margin="0">
+                    <Label x:Name="balanceLab" BackgroundColor="#145470" Style="{StaticResource Label}"/>
+                </Frame>
+                <StackLayout>
+                    <Label Text="Номер карты" Style="{StaticResource Label}"/>
+                    <Entry x:Name="cardLab" TextChanged="update" Placeholder="****************" MaxLength="16" Style="{StaticResource Entry}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Сумма" Style="{StaticResource Label}"/>
+                    <Entry x:Name="sumVal" TextChanged="update" Placeholder="10" Keyboard="Numeric" Style="{StaticResource Entry}"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <StackLayout Margin="30">
+                        <Button x:Name="addBtn" Clicked="AddBalance" Text="Пополнить" IsEnabled="False" BackgroundColor="White" FontSize="32" TextColor="#0e88db" CornerRadius="100" FontFamily="{StaticResource Light}"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.numTimePage">
+    <ContentPage.Resources>
+        <Style x:Key="hourButton" TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="BackgroundColor" Value="#145470" />
+            <Setter Property="BorderWidth" Value="3"/>
+        </Style>
+        <Style x:Key="plate" TargetType="Entry">
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="PlaceholderColor" Value="LightGray"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Bold.ttf#Comfortaa"/>
+            <Setter Property="BackgroundColor" Value="White" />
+        </Style>
+        <Style x:Key="entry" TargetType="Entry">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="Keyboard" Value="Numeric"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="PlaceholderColor" Value="#0D3844"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BackgroundColor" Value="#145470" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#0e88db">
+                <StackLayout>
+                    <Label 
+                        Text="Время" HorizontalTextAlignment="Center" FontSize="64" TextColor="White" FontFamily="{StaticResource Regular}"/>
+                    <Label HorizontalTextAlignment="Center" Text="Выберите время, на которое хотите оплатить парковку" FontSize="20" TextColor="White" FontFamily="{StaticResource Light}" />
+                </StackLayout>
+                <StackLayout  Margin="10,0,10,30">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Button x:Name="hour1" Text="1 ч." Clicked="radioButton" Style="{StaticResource hourButton}" WidthRequest="60"/>
+                        <Button x:Name="hour2" Text="2 ч." Clicked="radioButton" WidthRequest="{Binding Path=Width, Source={x:Reference hour1}}" Style="{StaticResource hourButton}"/>
+                        <Button x:Name="hour3" Text="3 ч." Clicked="radioButton" WidthRequest="{Binding Path=Width, Source={x:Reference hour1}}" Style="{StaticResource hourButton}"/>
+                        <Button x:Name="hour8" Text="8 ч." Clicked="radioButton" WidthRequest="{Binding Path=Width, Source={x:Reference hour1}}" Style="{StaticResource hourButton}"/>
+                        <Button x:Name="hour12" Text="12 ч." Clicked="radioButton" WidthRequest="{Binding Path=Width, Source={x:Reference hour1}}" Style="{StaticResource hourButton}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Entry x:Name="Entry" Unfocused="entryCheck" MaxLength="3" Placeholder="введите время..." PlaceholderColor="#0E88DB" WidthRequest="230" Style="{StaticResource entry}"/>
+                        <Button Text="часов" Style="{StaticResource hourButton}" IsEnabled="False"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Номер" HorizontalTextAlignment="Center" FontSize="64" TextColor="White" FontFamily="{StaticResource Regular}"/>
+                    <Label HorizontalTextAlignment="Center" Text="Нажмите на номер, чтобы его изменить" FontSize="20" TextColor="White" FontFamily="{StaticResource Light}" />
+                    <Entry x:Name="plateEntry" Unfocused="globalCheck" Placeholder="EST 777" Text="LOX 777" Style="{StaticResource plate}" Margin="20,0,20,0"/>
+                </StackLayout>
+                <StackLayout Margin="60" VerticalOptions="EndAndExpand">
+                    <Button x:Name="goButton" Clicked="goPay" Text="Далее" IsEnabled="False" BackgroundColor="White" FontSize="32" TextColor="#0e88db" CornerRadius="100" FontFamily="{StaticResource Light}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

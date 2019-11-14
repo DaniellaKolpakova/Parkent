@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.anotherLoc">
+    <ContentPage.Resources>
+        <Style x:Key="btnDarkB" TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="BackgroundColor" Value="#145470" />
+            <Setter Property="HeightRequest" Value="60" />
+        </Style>
+        <Style x:Key="btnW" TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="#145470"/>
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="BackgroundColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#0e88db">
+                <StackLayout Margin="0" BackgroundColor="#0e88db">
+                    <Label Text="Где вы находитесь ?" HorizontalTextAlignment="Center" FontSize="48" TextColor="White" FontFamily="{StaticResource Regular}"/>
+                </StackLayout>
+                <Frame x:Name="frameContainer" Padding="0" Margin="20" CornerRadius="15" BackgroundColor="White">
+                    <StackLayout HorizontalOptions="Center" Padding="0" Margin="0" BackgroundColor="White" WidthRequest="{Binding Path=Width, Source={x:Reference frameContainer}}">
+                        <Label Text="Районы:" HorizontalTextAlignment="Center" FontSize="35" TextColor="#145470" FontFamily="{StaticResource Regular}"/>
+                        <Button x:Name="CityAreaBtn1" Clicked="CityArea" CommandParameter="Lasnamae" Text="Lasnamae" Style="{StaticResource btnDarkB}"/>
+                        <Button x:Name="CityAreaBtn2" Clicked="CityArea" CommandParameter="Mustamae" Text="Mustamae" Style="{StaticResource btnW}"/>
+                        <Button x:Name="CityAreaBtn3" Clicked="CityArea" CommandParameter="Pirita" Text="Pirita" Style="{StaticResource btnDarkB}"/>
+                        <Button x:Name="CityAreaBtn4" Clicked="CityArea" CommandParameter="Kesklinn" Text="Kesklinn" Style="{StaticResource btnW}"/>
+                        <Button x:Name="CityAreaBtn5" Clicked="CityArea" CommandParameter="Kristiine" Text="Kristiine" Style="{StaticResource btnDarkB}"/>
+                        <Button x:Name="CityAreaBtn6" Clicked="CityArea" CommandParameter="Nomme" Text="Nomme" Style="{StaticResource btnW}"/>
+                        <Button x:Name="CityAreaBtn7" Clicked="CityArea" CommandParameter="Haabersti" Text="Haabersti" Style="{StaticResource btnDarkB}"/>
+                        <Button x:Name="CityAreaBtn8" Clicked="CityArea" CommandParameter="Pohja-Tallinna" Text="Pohja-Tallinna" Style="{StaticResource btnW}"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

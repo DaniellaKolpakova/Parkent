@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.payPage">
+    <ContentPage.Resources>
+        <Style x:Key="btn" TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="BackgroundColor" Value="#145470" />
+            <Setter Property="BorderWidth" Value="3"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#0e88db">
+            <StackLayout>
+                <Label Text="Оплата" HorizontalTextAlignment="Center" FontSize="64" TextColor="White" FontFamily="{StaticResource Regular}"/>
+                <Label HorizontalTextAlignment="Center" Text="Выберите способ оплаты" FontSize="20" TextColor="White" FontFamily="{StaticResource Light}" />
+            </StackLayout>
+            <StackLayout Margin="0,30,0,0">
+                <Label x:Name="priceLabel" HorizontalTextAlignment="Center" FontSize="22" TextColor="White" FontFamily="{StaticResource Regular}" HeightRequest="30"  />
+                <Label x:Name="tarifLabel" HorizontalTextAlignment="Center" FontSize="12" TextColor="White" FontFamily="{StaticResource Light}"/>
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,0">
+                    <Button x:Name="balanceBtn" Clicked="checkPay" CommandParameter="balance" Style="{StaticResource btn}" WidthRequest="{Binding Path=Width, Source={x:Reference bankBtn}}"/>
+                    <Button x:Name="bankBtn" Clicked="checkPay" CommandParameter="bank" Style="{StaticResource btn}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="60" VerticalOptions="EndAndExpand">
+                <Button x:Name="pay" Text="Оплатить" IsEnabled="False" BackgroundColor="White" FontSize="32" TextColor="#0e88db" CornerRadius="100" FontFamily="{StaticResource Light}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.menu.menu">
+    <ContentPage.Resources>
+        <Style x:Key="btn" TargetType="Button">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="BackgroundColor" Value="#145470" />
+            <Setter Property="BorderWidth" Value="3"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#0e88db">
+            <StackLayout>
+                <Label Text="Меню" HorizontalTextAlignment="Center" FontSize="64" TextColor="White" FontFamily="{StaticResource Regular}"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout Margin="20">
+                    <Button Text="Оплаченая парковка" Clicked="parkingPage" Style="{StaticResource btn}" WidthRequest="{Binding Path=Width, Source={x:Reference leaveBtn}}"/>
+                    <Button Text="Пополнить баланс" Clicked="addBalance" Style="{StaticResource btn}" WidthRequest="{Binding Path=Width, Source={x:Reference leaveBtn}}"/>
+                    <Button Text="Сменить пароль" Clicked="passwordRecovery" Style="{StaticResource btn}" WidthRequest="{Binding Path=Width, Source={x:Reference leaveBtn}}"/>
+                    <Button Text="Настройки" Clicked="settings" Style="{StaticResource btn}" WidthRequest="{Binding Path=Width, Source={x:Reference leaveBtn}}"/>
+                    <Button Text="Выйти" Clicked="leave" x:Name="leaveBtn" Style="{StaticResource btn}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

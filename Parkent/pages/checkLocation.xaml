@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Parkent.checkLocation">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#0e88db">
+            <StackLayout Margin="0, 50, 0, 0">
+                <Label Text="Вы здесь?" HorizontalTextAlignment="Center" FontSize="64" TextColor="White" FontFamily="{StaticResource Regular}"/>
+                <Label x:Name="Login_bar" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Text="Не удалось определить адрес" FontSize="24" TextColor="White" FontFamily="{StaticResource Light}"/>
+            </StackLayout>
+            <StackLayout Margin="60" VerticalOptions="EndAndExpand">
+                <Button Clicked="numTimePage_open" Text="Да" BackgroundColor="White" FontSize="32" TextColor="#0e88db" CornerRadius="100" FontFamily="{StaticResource Light}"/>
+                <Button BorderColor="Transparent" BackgroundColor="Transparent" Margin="0, 10, 0, 0" Clicked="anotherLoc_open" x:Name="anotherLoc" Text="Выбрать другое место" TextColor="#145470" FontFamily="{StaticResource Light}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

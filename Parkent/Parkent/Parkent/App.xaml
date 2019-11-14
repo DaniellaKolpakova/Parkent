@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Parkent.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Bold">
+                <On Platform="Android" Value="Comfortaa-Bold.ttf#Comfortaa" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Regular">
+                <On Platform="Android" Value="Comfortaa-Regular.ttf#Comfortaa" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="Light">
+                <On Platform="Android" Value="Comfortaa-Light.ttf#Comfortaa" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#0e88db"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parkent.pages.menu.parkingPage">
+    <ContentPage.Resources>
+        <Style x:Key="frame" TargetType="Frame">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BackgroundColor" Value="#145470" />
+        </Style>
+        <Style x:Key="text" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Regular.ttf#Comfortaa"/>
+            <Setter Property="BackgroundColor" Value="#145470" />
+        </Style>
+        <Style x:Key="plate" TargetType="Label">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontFamily" Value="Comfortaa-Bold.ttf#Comfortaa"/>
+            <Setter Property="BackgroundColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="#0e88db">
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Оплаченная парковка" HorizontalTextAlignment="Center" FontSize="50" TextColor="White" FontFamily="{StaticResource Regular}"/>
+                    <StackLayout x:Name="body" Margin="20">
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
