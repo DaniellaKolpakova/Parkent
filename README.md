@@ -21,7 +21,6 @@
 #### Схема:
 ![UML scheme](https://github.com/dufftie/parkent/blob/master/source/preview.PNG)
 
-![design](https://github.com/dufftie/parkent/blob/master/source/design.jpg)
 
 
 # Документация:
